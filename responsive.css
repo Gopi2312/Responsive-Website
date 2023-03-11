@@ -1,0 +1,276 @@
+*{
+    top: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.menu{
+    height: 80px;
+    width: 100%;
+    border: 1px solid;
+    align-items: center;
+    gap: 30px;
+    justify-content: space-between;
+    padding: 10px;
+    display: none;
+}
+
+.nav-bar-menu{
+    gap: 10px;
+    list-style: none;
+    align-items: end;
+    display: none;
+    padding: 10px;
+    z-index: 1;
+}
+
+.menu img{
+    height: 60px;
+    width: 200px;
+}
+
+.header{
+    height: 80px;
+    width: 100%;
+    border: 1px solid;
+    display: flex;
+    align-items: center;
+    gap: 30px;  
+}
+.header img{
+    height: 60px;
+    width: 50px;
+    flex: 15%;
+}
+
+.nav-bar{
+    display: flex;
+    justify-content: space-around;
+    gap: 100px;
+    list-style: none;
+    flex: 70%;
+}
+
+.nav-bar a , .nav-bar-menu a {
+    text-decoration: none;
+    font-size: medium;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: black;
+}
+
+.nav-bar a:hover , .nav-bar-menu a:hover{
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(93, 105, 83, 0.728);
+    background-color: rgba(98, 185, 196, 0.658);
+    padding: 8px;
+}
+
+.header h3{
+    flex: 15%;
+    font-family:fantasy;
+    font-style: italic;
+    color: rgb(70, 61, 107);
+}
+
+.mart-image{
+    display: flex;
+    padding: 10px;
+    width: 100%;
+    border: 10px solid #1b1b25b3;
+}
+
+.mart-image img{
+    width: 100%;
+    height: 350px;
+    margin: auto;
+    transition: all 0.3s ease-in-out;
+}
+
+.mart-image img:hover{
+    transform: scale(1.1);
+    background-color: #5a3c3c80;
+}
+
+.shoe-text{
+    height: 50px;
+    width: 100%;
+    line-height: 50px;
+    border: 1px solid;
+    background-color: #d1d4d4;
+}
+
+.shoe-text p{
+    font-family: Brush Script MT;
+    text-align: center;
+    font-size:xx-large;
+}
+
+
+.shoe-image{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 20px;
+    gap: 10px;
+    border: 10px solid #1b1b25b3;
+    background-color: #aa82aa;
+}
+
+.image{
+    height: auto;
+    width: 25%;
+    border: 2px solid #deb887;
+    border-radius: 10px;
+    background-color: #8b008b;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.image img{
+    height: 80%;
+    width: 80%;
+    padding: 10px;
+    border: 5px solid #7b7b79;
+    border-radius: 10px;
+    background-color: #f0f8ff;
+    cursor: pointer;
+}
+
+.image-container{
+    position: fixed;
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(227, 227, 227, 0);
+    display: none;
+}
+
+.display-image{
+    height: 70%;
+    width: 40%;
+    margin: auto;
+    display: flex;
+}
+.cross{
+    cursor: pointer;
+    width: auto;
+    height: 10px;
+}
+.display-image img{
+    height: 100%;
+    width: 100%;
+    border-radius: 15px;
+    border: 10px solid rgb(28, 5, 55);
+}
+
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 30px 0;
+  }
+  
+  .footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  .footer-info, .footer-contact, .footer-social {
+    width: 300px;
+  } 
+  
+  .footer-info h3, .footer-contact h3, .footer-social h3 {
+    font-size: 20px;
+  }
+  
+  .footer-social ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .footer-social li {
+    display: inline-block;
+    margin-right: 10px;
+  }
+  
+  .footer-social a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  @media  (max-width: 320px){  
+    .image{
+        width: 100%;
+    } 
+    .footer-container {
+        gap: 10px;
+        flex-direction: column;
+    }
+    .shoe-text p{
+        font-size:large;
+    }
+    .header{
+        display: none;
+    }
+    .menu{
+        display: flex;
+    }
+    .nav-bar{
+        flex: 100%;
+        height: auto;
+        width: auto;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 768px){
+    
+    .image{
+        width: 40%;
+        height: auto;
+    } 
+    .image h3{
+        font-size: small;
+    }
+    .header{
+        flex-wrap: wrap;
+    }
+    .header img{
+        display: none;
+    }
+    .nav-bar{
+        justify-content: left;
+        gap: 20px;
+        flex: 100%;
+    }
+    .footer-container {
+        gap: 10px;
+    }
+    .shoe-text p{
+        font-size: larger;
+    }
+    .header h3{
+        display: none;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px){
+    .nav-bar{
+        gap: 50px;
+        flex: 60%;
+    }
+    .footer-info, .footer-contact, .footer-social {
+        width: 200px;
+      } 
+}
