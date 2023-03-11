@@ -92,7 +92,7 @@
 }
 
 .mart-image img:hover{
-    transform: scale(1.1);
+    scale: 0.9;
     background-color: #5a3c3c80;
 }
 
@@ -134,6 +134,11 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    transition: all 0.3s ease-in-out;
+}
+
+.image:hover{
+    scale: 1.2;
 }
 
 .image img{
